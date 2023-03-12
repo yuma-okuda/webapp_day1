@@ -17,6 +17,7 @@ def send_message(notification_message):
     # Post実行
     requests.post(line_notify_api, headers=headers, data=data)
 
+
 def send_image():
     # LineNotify 連携用トークン・キー準備
     line_notify_token = '自分のトークン'
@@ -24,8 +25,9 @@ def send_image():
     path = '画像のパス'
     headers = {'Authorization': f'Bearer {line_notify_token}'}
     data = {'message': 'message: test'}
-    files = {"imageFile":open(path,'rb')}
-    requests.post(line_notify_api,headers=headers,data=data ,files=files)
+    files = {"imageFile": open(path, 'rb')}
+    requests.post(line_notify_api, headers=headers, data=data, files=files)
+
 
 if __name__ == "__main__":
     send_message()

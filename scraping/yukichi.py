@@ -10,7 +10,7 @@ def main(url):
 
     driver.get(url)
 
-    img = driver.find_element(By.XPATH, '****')  # ここは穴埋め！
+    img = driver.find_element(By.XPATH, '')  # ここは穴埋め！
     src = img.get_attribute('src')
     if src:
         # ファイルの保存
